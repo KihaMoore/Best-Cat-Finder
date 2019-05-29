@@ -28,13 +28,17 @@
 
 	<!-- Make final css adjustments with personal stylesheet -->
 	<link rel="stylesheet" type="text/css" href="css/survey.css">
+	<style>
 	
+	
+	</style>
+
 </head>
 
 <body>
 
 	<!-- first a navbar , not used, adds nice visual touch -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar ">
 		<p class="navbar-text"><h2 class="text-center">Pet Friend Finder Survey Questions</h2></p>
 	</nav>
 	
@@ -42,7 +46,8 @@
 	<div class="container">
 
 
-
+<ul>
+	<li>
 		<h3><strong>Question 1</strong></h3>
 		<h4>I love fluffy cat!</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q1">
@@ -51,8 +56,9 @@
             <option value="3">3 Depends</option>
             <option value="4">4 Sometimes</option>
             <option value="5">5 Nope</option>
-      	</select>
-
+ 	</select>
+</li>
+	 <li>
 		<h3><strong>Question 2</strong></h3>
 		<h4>I love naugty cat</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q2">
@@ -62,8 +68,8 @@
             <option value="4">4 Sometimes</option>
             <option value="5">5 Nope</option>
       	</select>
-
-
+			</li>
+<li>
 		<h3><strong>Question 3</strong></h3>
 		<h4>I love small cat</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q3">
@@ -73,8 +79,8 @@
             <option value="4">4 Sometimes</option>
             <option value="5">5 Nope</option>
       	</select>
-
-
+			</li>
+<li>
 		<h3><strong>Question 4</strong></h3>
 		<h4>I love a sweet cat</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q4">
@@ -84,8 +90,8 @@
             <option value="4">4 Sometimes</option>
             <option value="5">5 Nope</option>
       	</select>
-
-
+			</li>
+<li>
 		<h3><strong>Question 5</strong></h3>
 		<h4>Do you like short hair cat?</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q5">
@@ -95,8 +101,8 @@
             <option value="4">4 Sometimes</option>
             <option value="5">5 Nope</option>
       	</select>
-
-
+			</li>
+<li></li>
 		<h3><strong>Question 6</strong></h3>
 		<h4>Can you afford spending alot of money of cat food?</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q6">
@@ -106,8 +112,8 @@
             <option value="4">4 Sometimes</option>
             <option value="5">5 Nope</option>
       	</select>
-
-
+			</li>
+<li></li>
 		<h3><strong>Question 7</strong></h3>
 		<h4>I love dog more than cat.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q7">
@@ -117,7 +123,8 @@
             <option value="4">4 Sometimes</option>
             <option value="5">5 Nope</option>
       	</select>
-
+			</li>
+				<li>
 		<h3><strong>Question 8</strong></h3>
 		<h4>small cats are the best!</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q8">
@@ -127,7 +134,8 @@
             <option value="4">4 Sometimes</option>
             <option value="5">5 Nope</option>
       	</select>
-
+			</li>
+				<li>
 		<h3><strong>Question 9</strong></h3>
 		<h4>Do you have a big space?</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q9">
@@ -137,7 +145,8 @@
             <option value="4">4 Sometimes</option>
             <option value="5">5 Nope</option>
       	</select>
-
+			</li>
+				<li>
 		<h3><strong>Question 10</strong></h3>
 		<h4>Do you prefer white cat?</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q10">
@@ -147,12 +156,12 @@
             <option value="4">4 Sometimes</option>
             <option value="5">5 Nope</option>
       	</select>
-
+			</li>
 		<br>
 		<br>
-
+	</ul>
 		<!-- Submit Button -->
-		<button type="submit" class="btn btn-primary btn-lg btn-block specialbutton" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit</button>
+		<button type="submit" class="btn  btn-info btn-lg" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit</button>
 
 	</div>
 
@@ -168,7 +177,7 @@
 	      </div>
 	      <div class="modal-body">
 	        <h2 id="matchName"></h2>
-    <img id="matchImg" class="img-responsive" src="https://data.whicdn.com/images/298844185/large.jpg?t=1507433077">
+      	<img id="matchImg" class="img-responsive" src="https://www.petsfriendsunnyvale.com/storage/app/media/bigstock-British-Longhair-Cat--Months-10206431.jpg">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -180,14 +189,9 @@
 	<!-- end the bootstrap container -->
 	</div>
 
-	<!-- bottom navbar functioning as footer -->
-	<nav class="navbar navbar-default navbar-fixed-bottom">
-		<div class="container vertical_alignment">
-		   	<p class="text-center"><a href="/api/cats" target="_blank">API Friends List</a> | <a href="#" target="_blank">GitHub Repo</a> | <a href="home.html">Home</a></p>
-	    </div>
-	</nav>
-
-	<!-- javascript for this page-->
+	<div class="container vertical_alignment">
+			<p class="text-center footer"><a href="/api/cats" target="_blank">API Cats List</a> | <a href="https://github.com/KihaMoore/Best-Cat-Finder" target="_blank">GitHub Repo</a></p>
+	 </div>
 	
 	<script>
 

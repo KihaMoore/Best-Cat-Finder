@@ -7,56 +7,77 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-	<!-- add link to the jQuery CDN -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-
-	<!-- Bootstrap section -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!-- Optional theme -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-	<!-- Make final css adjustments with personal stylesheet -->
-	<script src="home.js"></script>
-	<link rel="stylesheet" href="public/css/home.css">
 	
-</head>
+	 
+	
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+　<script src="jquery.bgswitcher.js"></script>
+	
+	
+	<style>
+
+		
+
+a{
+			color:white;
+			text-decoration: none;
+		}
+
+		 body {
+  background: url(https://images.pexels.com/photos/416135/pexels-photo-416135.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500) center center / cover no-repeat fixed;
+} 
+  .bg-switcher {
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+ .bg-title {
+    color: #fff;
+    font-size: 4vw;
+		line-height: 1.8;
+		letter-spacing:0.5;
+    text-align: center;
+     /* text-shadow: 1px 1px 1px #000;  */
+		 font-family: Times, "serif";
+		 -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+} 
+.bg-title:hover {
+    background-color: red;
+    }
+
+	
+p.footer{
+  text-align: center;
+	}
+	 
+</style>
+	</head>
 
 <body>
-	<br>
-	<h1 id="front-page" class=" head">Purrfect cat finder!</h1>
-	<h2 id="secondary-txt" class=" head">Take the survey and find out the purrfect cat</h2>
 	
-<!-- comment -->
-<div class="container">
-	<br>
-	<div id="start-buttons">
-			<br>
-			<div class="row d-flex justify-content-start mb-3">
-					
-				<p class="text-center"><a href="/survey" class="btn btn-primary btn-lg active" role="button"><span class="glyphicon glyphicon-list-alt"></span> Take the Survey!</a></p>
-			</div>
-	</div>
+		<figure class=”hover-parent”>
+				
+				　<figcaption class=”hover-mask”>
+						　<h1 class="bg-title"><a href="/survey">Purrfect cat finder!</h1>
 
-
-
-
+				　</figcaption>
+				</figure>
 	
-
-	<!-- bottom navbar acting as footer -->
-	<nav class="navbar navbar-default navbar-fixed-bottom">
-		<div class="container vertical_alignment">
-		   	<p class="text-center"><a href="/api/cats" target="_blank">API Cats List</a> | <a href="#" target="_blank">GitHub Repo</a></p>
+<div class="container vertical_alignment">
+		   	<p class="text-center footer"><a href="/api/cats" target="_blank">API Cats List</a> | <a href="https://github.com/KihaMoore/Best-Cat-Finder" target="_blank">GitHub Repo</a></p>
 	    </div>
-	</nav>
-
 	
+
+
+
 </body>
 
 </html>
