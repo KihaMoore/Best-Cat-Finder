@@ -46,7 +46,6 @@
 		<h3><strong>Question 1</strong></h3>
 		<h4>I love fluffy cat!</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q1">
-	 		<option value=""></option>
             <option value="1">1 Love</option>
             <option value="2">2 Maybe</option>
             <option value="3">3 Depends</option>
@@ -57,7 +56,6 @@
 		<h3><strong>Question 2</strong></h3>
 		<h4>I love naugty cat</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q2">
-	 		<option value=""></option>
             <option value="1">1 Love</option>
             <option value="2">2 Maybe</option>
             <option value="3">3 Depends</option>
@@ -69,7 +67,6 @@
 		<h3><strong>Question 3</strong></h3>
 		<h4>I love small cat</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q3">
-	 		<option value=""></option>
             <option value="1">1 Love</option>
             <option value="2">2 Maybe</option>
             <option value="3">3 Depends</option>
@@ -81,7 +78,6 @@
 		<h3><strong>Question 4</strong></h3>
 		<h4>I love a sweet cat</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q4">
-	 		<option value=""></option>
             <option value="1">1 Love</option>
             <option value="2">2 Maybe</option>
             <option value="3">3 Depends</option>
@@ -93,7 +89,6 @@
 		<h3><strong>Question 5</strong></h3>
 		<h4>Do you like short hair cat?</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q5">
-	 		<option value=""></option>
             <option value="1">1 Love it</option>
             <option value="2">2 Maybe</option>
             <option value="3">3 Depends</option>
@@ -105,7 +100,6 @@
 		<h3><strong>Question 6</strong></h3>
 		<h4>Can you afford spending alot of money of cat food?</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q6">
-	 		<option value=""></option>
             <option value="1">1 Yes</option>
             <option value="2">2 Maybe</option>
             <option value="3">3 Depends</option>
@@ -117,7 +111,6 @@
 		<h3><strong>Question 7</strong></h3>
 		<h4>I love dog more than cat.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q7">
-	 		<option value=""></option>
             <option value="1">1 Yes</option>
             <option value="2">2 Maybe</option>
             <option value="3">3 Depends</option>
@@ -128,7 +121,6 @@
 		<h3><strong>Question 8</strong></h3>
 		<h4>small cats are the best!</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q8">
-	 		<option value=""></option>
             <option value="1">1 Yes</option>
             <option value="2">2 Maybe</option>
             <option value="3">3 Depends</option>
@@ -139,7 +131,6 @@
 		<h3><strong>Question 9</strong></h3>
 		<h4>Do you have a big space?</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q9">
-	 		<option value=""></option>
             <option value="1">1 Yes</option>
             <option value="2">2 Maybe</option>
             <option value="3">3 Depends</option>
@@ -150,7 +141,6 @@
 		<h3><strong>Question 10</strong></h3>
 		<h4>Do you prefer white cat?</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q10">
-	 		<option value=""></option>
             <option value="1">1 Yes</option>
             <option value="2">2 Maybe</option>
             <option value="3">3 Depends</option>
@@ -174,11 +164,11 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h2 class="modal-title"><strong>Your Ideal Pet Friend:</strong></h2>
+	        <h2 class="modal-title"><strong>Your perfect Cat Friend:</strong></h2>
 	      </div>
 	      <div class="modal-body">
 	        <h2 id="matchName"></h2>
-	        <img id="matchImg" class="img-responsive" src="images/loading.gif" alt="pet">
+    <img id="matchImg" class="img-responsive" src="https://data.whicdn.com/images/298844185/large.jpg?t=1507433077">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -193,13 +183,82 @@
 	<!-- bottom navbar functioning as footer -->
 	<nav class="navbar navbar-default navbar-fixed-bottom">
 		<div class="container vertical_alignment">
-		   	<p class="text-center"><a href="/api/friends" target="_blank">API Friends List</a> | <a href="https://github.com/gnenov89/FriendFInder" target="_blank">GitHub Repo</a> | <a href="home.html">Home</a></p>
+		   	<p class="text-center"><a href="/api/cats" target="_blank">API Friends List</a> | <a href="#" target="_blank">GitHub Repo</a> | <a href="home.html">Home</a></p>
 	    </div>
 	</nav>
 
 	<!-- javascript for this page-->
-	<!-- <script src="js/survey_js.js"></script> -->
+	
+	<script>
 
+var config = {
+	'.chosen-select'           : {},
+	'.chosen-select-deselect'  : {allow_single_deselect:true},
+	'.chosen-select-no-single' : {disable_search_threshold:10},
+	'.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+	'.chosen-select-width'     : {width:"95%"}
+};
+
+for (var selector in config) {
+	$(selector).chosen(config[selector]);
+}
+
+// Capture the form inputs 
+$("#submit").on("click", function(){
+
+	// Form validation
+	function validateForm() {
+		var isValid = true;
+		$('.form-control').each(function() {
+		if ( $(this).val() === '' )
+			isValid = false;
+		});
+
+		$('.chosen-select').each(function() {
+
+	  	if( $(this).val() === "")
+	  		isValid = false;
+		});
+
+		return isValid;
+	}
+
+	// If all required fields are filled
+	if (validateForm() == true)
+	{
+		// Create an object for the user's data
+    	var userInput = {
+			scores: [$("#q1").val().trim(),  
+							 $("#q2").val().trim(), 
+							 $("#q3").val().trim(), 
+							 $("#q4").val().trim(), 
+							 $("#q5").val().trim(), 
+							 $("#q6").val().trim(), 
+							 $("#q7").val().trim(), 
+							 $("#q8").val().trim(), 
+							 $("#q9").val().trim(), 
+							 $("#q10").val().trim()]
+			 };
+
+    	$.post( "/api/cats", userInput).done(function(data){
+
+    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
+    		// $("#matchName").tex(data.matchName);
+    		$('#matchImg').attr("src", data.matchPhoto);
+
+	    	// Show the modal with the best match 
+	    	$("#resultsModal").modal('toggle');
+
+    	});
+	}
+	else
+	{
+		alert("Please fill out all fields before submitting!");
+	}
+	
+	
+});
+
+</script>
 </body>
-
 </html>

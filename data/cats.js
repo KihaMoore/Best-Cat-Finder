@@ -41,7 +41,7 @@ var cats = [
  },
  {
   name: "Chips",
-  photo: "https://i.ytimg.com/vi/H09Z4LFJrvQ/hqdefault.jpg",
+  photo: "https://i.chzbgr.com/full/9297554688/h9677AD28/",
   scores: [2,3,4,5,3,5,3,4,5,1]
 }
   ];

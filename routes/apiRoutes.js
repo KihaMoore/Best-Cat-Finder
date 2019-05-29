@@ -1,46 +1,45 @@
-var path = require("path");
-var cats = require("../data/cats.js");
+var path = require('path');
 
+// pull in the friends variable data file
+var cats = require('../data/cats.js');
 
 module.exports = function(app) {
- 
-  app.get("/api/cats", function(req,res) {
-    res.json(cats);
-  });
-     
-    app.post("/api/cats", function(req,res){
-      
-      var surveyResults = req.body.scores;
 
-      for (var i=0; i<surveyResults.length; i++){
-          surveyResults[i] = parseInt(surveyResults[i]);
-      }
+	// if user goes to /api/friends, send them the variable data as json
+	app.get("/api/cats", function(req, res) {
+		res.json(cats);
+	});
 
-     var bestDifference = 10000;
-     var bestMatch = 0;
+	// handle the post request from the survey form
+	app.post("/api/cats", function(req, res) {
+		
+		
+    var userInput = req.body;
+    var userResponses = userInput.scores;
 
-     for (var i=0; cats.length; i++){
-
-      var tempDifference = difference(surveyResults, cats[i].scores);
-     
-      console.log("difference between", surveyResults, "and",cats[i].name,cat[i].scores, "=", tempDifference);
+    var matchName = "";
+    var matchImage = "";
+    var totalDifference = 500;
     
-     if (tempDifference < bestDifference) {
-      bestDifference = tempDifference;
-      bestMatch = i;
-    }
+		// convert the values in surveyResults to integers
+		for (var i=0; i<cats.length; i++) {
+      
+      var diff = 0;
 
+      for (var a = 0; a < userResponses.length; a++){
+        diff += Math.abs(cats[i].scores[a] - userResponses[a]);
+		}
+      
+    if(diff < totalDifference) {
+      
+      totalDifference = diff;
+      matchName = cats[i].name;
+      matchImage = cats[i].photo;
+    }
   }
 
-    function difference(array1, array2) {
-      var differenceAmount = 0;
-
-      for (var i =0; i<array1.length; i++){
-        differenceAmount += Math.abs(array1[i] - array2[i]);
-      }
-    return differenceAmount;
-    }
-    res.send(cats[bestMatch]);
+    cats.push(userInput);
     
-  });
+    res.json({status: "OK", matchName, matchImage: matchImage});
+});
 }

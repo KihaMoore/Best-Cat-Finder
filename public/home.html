@@ -6,8 +6,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Week 13 HW - Pet Friend Finder">
-	<meta name="author" content="Georgi Nenov">
+
 	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 	<!-- add link to the jQuery CDN -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -24,44 +23,31 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<!-- Make final css adjustments with personal stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/home.css">
-
+	<script src="home.js"></script>
+	<link rel="stylesheet" href="public/css/home.css">
+	
 </head>
 
-<body class="my-page">
-
+<body>
+	<br>
+	<h1 id="front-page" class=" head">Purrfect cat finder!</h1>
+	<h2 id="secondary-txt" class=" head">Take the survey and find out the purrfect cat</h2>
 	
-	<!-- begin the bootstrap container -->
-	<div class="container">
-		<div class="jumbotron">
-
-			<div class="container-fluid center">
-				<h1 class="text-center">Cat Friend Finder</h1>
-				<p class="text-center">Answer a few questions then find your perfect cat friend!</p><br>
-
-				<!-- button link/href is going to be to /survey as defined in htmlroutes.js -->
+<!-- comment -->
+<div class="container">
+	<br>
+	<div id="start-buttons">
+			<br>
+			<div class="row d-flex justify-content-start mb-3">
+					
 				<p class="text-center"><a href="/survey" class="btn btn-primary btn-lg active" role="button"><span class="glyphicon glyphicon-list-alt"></span> Take the Survey!</a></p>
 			</div>
-		<!-- end jumbotron next -->
-		</div>
-
-		<div class="row">
-			<div class="col-md-3">
-				<img src="images/1.gif" class="img-responsive" alt="pets">
-			</div>
-			<div class="col-md-3">
-				<img src="images/2.gif" class="img-responsive" alt="pets">
-			</div>
-			<div class="col-md-3">
-				<img src="images/3.gif" class="img-responsive" alt="pets">
-			</div>
-			<div class="col-md-3">
-				<img src="images/4.gif" class="img-responsive" alt="pets">
-			</div>
-		</div>
-
-	<!-- end the bootstrap container -->
 	</div>
+
+
+
+
+	
 
 	<!-- bottom navbar acting as footer -->
 	<nav class="navbar navbar-default navbar-fixed-bottom">
@@ -70,9 +56,7 @@
 	    </div>
 	</nav>
 
-	<!-- link in custom JS if needed -->
-	<!-- <script src="public/home.js"></script> -->
-
+	
 </body>
 
 </html>
