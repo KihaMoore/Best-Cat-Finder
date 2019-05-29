@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pet Friend Finder</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Week 13 HW - Pet Friend Finder">
+	<meta name="author" content="Georgi Nenov">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<!-- add link to the jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+	<!-- Bootstrap section -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Make final css adjustments with personal stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+
+</head>
+
+<body class="my-page">
+
+	
+	<!-- begin the bootstrap container -->
+	<div class="container">
+		<div class="jumbotron">
+
+			<div class="container-fluid center">
+				<h1 class="text-center">Cat Friend Finder</h1>
+				<p class="text-center">Answer a few questions then find your perfect cat friend!</p><br>
+
+				<!-- button link/href is going to be to /survey as defined in htmlroutes.js -->
+				<p class="text-center"><a href="/survey" class="btn btn-primary btn-lg active" role="button"><span class="glyphicon glyphicon-list-alt"></span> Take the Survey!</a></p>
+			</div>
+		<!-- end jumbotron next -->
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<img src="images/1.gif" class="img-responsive" alt="pets">
+			</div>
+			<div class="col-md-3">
+				<img src="images/2.gif" class="img-responsive" alt="pets">
+			</div>
+			<div class="col-md-3">
+				<img src="images/3.gif" class="img-responsive" alt="pets">
+			</div>
+			<div class="col-md-3">
+				<img src="images/4.gif" class="img-responsive" alt="pets">
+			</div>
+		</div>
+
+	<!-- end the bootstrap container -->
+	</div>
+
+	<!-- bottom navbar acting as footer -->
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container vertical_alignment">
+		   	<p class="text-center"><a href="/api/cats" target="_blank">API Cats List</a> | <a href="#" target="_blank">GitHub Repo</a></p>
+	    </div>
+	</nav>
+
+	<!-- link in custom JS if needed -->
+	<!-- <script src="public/home.js"></script> -->
+
+</body>
+
+</html>
